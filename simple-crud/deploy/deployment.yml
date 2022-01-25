@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-crud
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-crud
+  template:
+    metadata:
+      labels:
+        app: simple-crud
+    spec:
+      containers:
+      - name: app
+        image: simple-crud:0.99.0
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: simple-crud
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128M
+          requests:
+            cpu: 50m
+            memory: 64M
+            
