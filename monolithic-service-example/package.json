@@ -1,0 +1,48 @@
+{
+  "name": "autan",
+  "version": "0.1.0",
+  "description": "autan is a simple rest api service that handle auth using jwt",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "jest",
+    "watch": "nodemon src/app.js",
+    "lint": "./node_modules/.bin/eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imamfzn/autan.git"
+  },
+  "keywords": [
+    "auth",
+    "jwt"
+  ],
+  "author": "Muhammad Imam Fauzan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imamfzn/autan/issues"
+  },
+  "homepage": "https://github.com/imamfzn/autan#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "humps": "^2.0.1",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "pino": "^6.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  }
+}
